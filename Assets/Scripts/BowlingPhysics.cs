@@ -35,7 +35,6 @@ public class BowlingPhysics : MonoBehaviour
         // Visualize the ray in the editor (for debugging)
         Debug.DrawRay(origin, direction * rayLength, isGrounded ? Color.green : Color.red);
 
-        // Optionally, output to console for testing
         if (isGrounded)
         {
             BowlBody.drag = groundResis;

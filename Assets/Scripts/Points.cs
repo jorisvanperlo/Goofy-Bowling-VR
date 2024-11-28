@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PointCounter : MonoBehaviour
+public class Points : MonoBehaviour
 {
     public int lv1Points;
     public int lv2Points;
     public int lv1PointReq;
     public int lv2PointReq;
-    public Rigidbody rb;
+    
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -28,5 +28,4 @@ public class PointCounter : MonoBehaviour
             }
         }
     }
-
 }
