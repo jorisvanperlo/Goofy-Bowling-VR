@@ -9,14 +9,18 @@ public class PinPuller : MonoBehaviour
     public Vector3 bottomBack;
 
     public float speed; // Speed of movement
-
-    private Vector3[] points; // Array to store the sequence of points
+    
+    public Vector3[] points; // Array to store the sequence of points
     private int currentPointIndex = 0; // Index of the current target point
-    private bool movingForward = true; // Direction of movement
     // Start is called before the first frame update
-    void PullPins()
+
+    public void Start()
     {
         // Initialize the points array
+       
+    }
+    void PullPins()
+    {
         points = new Vector3[] { top, bottom, bottomBack, bottom, top };
         transform.position = top; // Start at point A
     }
@@ -28,19 +32,20 @@ public class PinPuller : MonoBehaviour
     }
     private void MoveBetweenPoints()
     {
-        if (points.Length == 0) return;
-
-        // Move towards the current target point
-        transform.position = Vector3.MoveTowards(transform.position, points[currentPointIndex], speed * Time.deltaTime);
-
-        // Check if the object has reached the current target point
-        if (transform.position == points[currentPointIndex])
+        if (points.Length > 0)
         {
-            // Move to the next point in the sequence
-            currentPointIndex++;
-            if (currentPointIndex >= points.Length)
+            // Move towards the current target point
+            transform.position = Vector3.MoveTowards(transform.position, points[currentPointIndex], speed * Time.deltaTime);
+
+            // Check if the object has reached the current target point
+            if (transform.position == points[currentPointIndex])
             {
-                currentPointIndex = 0; // Restart the sequence
+                // Move to the next point in the sequence
+                currentPointIndex++;
+                if (currentPointIndex >= points.Length)
+                {
+                    currentPointIndex = 0; // Restart the sequence
+                }
             }
         }
     }

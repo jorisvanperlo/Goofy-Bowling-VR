@@ -12,7 +12,7 @@ public class MovingPinsPlacer : MonoBehaviour
     public float waitTime;
 
     public GameObject pinPreFab;
-    public GameObject pinHolder;
+    public GameObject pinHolderClone;
     void Start()
     {
         DeployPins();
@@ -20,19 +20,21 @@ public class MovingPinsPlacer : MonoBehaviour
 
     private void DeployPins()
     {
-        Destroy(pinHolder);
-        pinHolder = Instantiate(pinPreFab, transform.position, transform.rotation);
+        Destroy(pinHolderClone);
+        pinHolderClone = Instantiate(pinPreFab, transform.position, transform.rotation)as GameObject;
+        pinHolderClone.transform.SetParent(this.transform);
         StartCoroutine(MoveObject());
     }
 
     private IEnumerator MoveObject()
     {
         // Move from A to B
+        reachBottom = false;
         yield return StartCoroutine(MoveBetweenPoints(top, bottom));
-        reachBottom = true;
 
         // Wait for 1 second
         yield return new WaitForSeconds(waitTime);
+        pinHolderClone.transform.SetParent(null);
 
         // Move back from B to A
         yield return StartCoroutine(MoveBetweenPoints(bottom, top));
