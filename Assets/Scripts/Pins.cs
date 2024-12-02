@@ -8,6 +8,7 @@ public class Pins : MonoBehaviour
     public bool beenHit;
     public bool pointGranted;
     public GameObject pointCounter;
+   
 
     public float rayLength; // How far the ray should check
     public LayerMask groundLayer; // LayerMask to specify ground layers
@@ -42,6 +43,7 @@ public class Pins : MonoBehaviour
             {
                 pointCounter.GetComponent<Points>().lv1Points += 1;
                 pointGranted = true;
+
             }
         }
     }
@@ -51,6 +53,10 @@ public class Pins : MonoBehaviour
         {
             rb.isKinematic = false;
             beenHit = true;
+        }
+        if (collision.gameObject.tag == "DeathPlane")
+        {
+            Destroy(gameObject);
         }
     }
 }

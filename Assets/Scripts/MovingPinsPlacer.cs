@@ -10,8 +10,18 @@ public class MovingPinsPlacer : MonoBehaviour
 
     public float moveDuration;
     public float waitTime;
+
+    public GameObject pinPreFab;
+    public GameObject pinHolder;
     void Start()
     {
+        DeployPins();
+    }
+
+    private void DeployPins()
+    {
+        Destroy(pinHolder);
+        pinHolder = Instantiate(pinPreFab, transform.position, transform.rotation);
         StartCoroutine(MoveObject());
     }
 

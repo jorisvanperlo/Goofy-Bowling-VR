@@ -9,7 +9,7 @@ public class MovingPinHolder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        pinPlacer = GetComponent<GameObject>();
     }
 
     // Update is called once per frame
