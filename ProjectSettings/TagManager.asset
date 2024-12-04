@@ -7,6 +7,8 @@ TagManager:
   - Pin
   - Ball
   - DeathPlane
+  - Anchor
+  - PinPuller
   layers:
   - Default
   - TransparentFX

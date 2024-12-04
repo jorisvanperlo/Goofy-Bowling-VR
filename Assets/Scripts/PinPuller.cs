@@ -7,20 +7,32 @@ public class PinPuller : MonoBehaviour
     public Vector3 top;
     public Vector3 bottom;
     public Vector3 bottomBack;
+    public float waitTime;
 
     public float speed; // Speed of movement
     
     public Vector3[] points; // Array to store the sequence of points
     private int currentPointIndex = 0; // Index of the current target point
-    // Start is called before the first frame update
+
+    public bool pulling;
+
+    public GameObject pinPlacer;
 
     public void Start()
     {
-        // Initialize the points array
+        
        
     }
-    void PullPins()
+
+    public void PullPinDelay()
     {
+        
+        Invoke(nameof(PullPins), waitTime);
+        
+    }
+    public void PullPins()
+    {
+        pulling = true;
         points = new Vector3[] { top, bottom, bottomBack, bottom, top };
         transform.position = top; // Start at point A
     }
@@ -44,7 +56,9 @@ public class PinPuller : MonoBehaviour
                 currentPointIndex++;
                 if (currentPointIndex >= points.Length)
                 {
+                    points = new Vector3[] {top};
                     currentPointIndex = 0; // Restart the sequence
+                    
                 }
             }
         }

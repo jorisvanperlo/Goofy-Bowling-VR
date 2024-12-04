@@ -15,7 +15,9 @@ public class BowlingBall : XRGrabInteractable
     public float startTime;
     public int ballsThrown;
     public int attemptedAmount;
-    
+
+    public GameObject pinPuller;
+
     public bool isBeingHeld;
     public UnityEvent OnLetGo;
     // Start is called before the first frame update
@@ -44,6 +46,7 @@ public class BowlingBall : XRGrabInteractable
     {
         if (collision.gameObject.tag == "DeathPlane")
         {
+            pinPuller.GetComponent<PinPuller>().PullPinDelay();
             RespawnBall();
             startDeathTimer = false;
             deathTimer = startTime;

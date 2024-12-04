@@ -13,12 +13,13 @@ public class MovingPinsPlacer : MonoBehaviour
 
     public GameObject pinPreFab;
     public GameObject pinHolderClone;
+
     void Start()
     {
         DeployPins();
     }
 
-    private void DeployPins()
+    public void DeployPins()
     {
         Destroy(pinHolderClone);
         pinHolderClone = Instantiate(pinPreFab, transform.position, transform.rotation)as GameObject;
