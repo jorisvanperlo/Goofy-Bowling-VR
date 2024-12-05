@@ -9,12 +9,11 @@ public class Pins : MonoBehaviour
     public bool beenHit;
     public bool pointGranted;
     public GameObject pointCounter;
+    public LayerMask groundlayer;
 
     public GameObject pinPuller;
 
     public float rayLength; // How far the ray should check
-    public LayerMask groundLayer; // LayerMask to specify ground layers
-    public bool isGrounded; // To store the result of the check
     // Start is called before the first frame update
     void Start()
     {
@@ -27,31 +26,21 @@ public class Pins : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (beenHit == true && pointGranted == false)
+        if (beenHit == true && pointGranted == false && pinPuller.GetComponent<PinPuller>().pulling == false)
         {
-            // Define the starting point of the ray
-            Vector3 origin = transform.position;
-
-            // Define the direction of the ray
-            Vector3 direction = Vector3.down;
-
-            // Perform the raycast
-            isGrounded = Physics.Raycast(origin, direction, rayLength, groundLayer);
-
-            // Visualize the ray in the editor (for debugging)
-            Debug.DrawRay(origin, direction * rayLength, isGrounded ? Color.green : Color.red);
-
+          Ray ray = new Ray(transform.position, -transform.up);
+         
            
-            if (isGrounded == false)
+            if (Physics.Raycast(ray, out RaycastHit hit, rayLength, groundlayer))
             {
-                print("hit");
-                if (pinPuller.GetComponent<PinPuller>().pulling == false)
-                {
-                    print("point");
-                    pointCounter.GetComponent<Points>().lv1Points += 1;
-                    pointGranted = true;
-                    
-                }
+                //You suck
+
+            }
+            else
+            {
+                print("point");
+                pointCounter.GetComponent<Points>().lv1Points += 1;
+                pointGranted = true;
             }
         }
     }

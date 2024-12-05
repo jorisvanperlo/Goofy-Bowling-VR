@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7794011784520909885}
   - component: {fileID: 4137410529623510213}
   - component: {fileID: 1081452872962512985}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bowling pin (7)
   m_TagString: Pin
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &1081452872962512985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,12 +152,11 @@ MonoBehaviour:
   beenHit: 0
   pointGranted: 0
   pointCounter: {fileID: 0}
-  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.6
-  groundLayer:
+  groundlayer:
     serializedVersion: 2
-    m_Bits: 0
-  isGrounded: 0
+    m_Bits: 8
+  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
+  rayLength: 0.2
 --- !u!1 &1198140047978128200
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +171,7 @@ GameObject:
   - component: {fileID: 2555536586765289244}
   - component: {fileID: 501577538993215146}
   - component: {fileID: 2619519660041487600}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bowling pin (5)
   m_TagString: Pin
   m_Icon: {fileID: 0}
@@ -293,7 +292,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &2619519660041487600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,12 +309,11 @@ MonoBehaviour:
   beenHit: 0
   pointGranted: 0
   pointCounter: {fileID: 0}
-  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.6
-  groundLayer:
+  groundlayer:
     serializedVersion: 2
-    m_Bits: 0
-  isGrounded: 0
+    m_Bits: 8
+  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
+  rayLength: 0.2
 --- !u!1 &1390089935528746270
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +328,7 @@ GameObject:
   - component: {fileID: 2235549614012969412}
   - component: {fileID: 1725314754908897475}
   - component: {fileID: 5303695250006545756}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bowling pin (1)
   m_TagString: Pin
   m_Icon: {fileID: 0}
@@ -451,7 +449,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &5303695250006545756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,12 +466,11 @@ MonoBehaviour:
   beenHit: 0
   pointGranted: 0
   pointCounter: {fileID: 0}
-  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.6
-  groundLayer:
+  groundlayer:
     serializedVersion: 2
-    m_Bits: 0
-  isGrounded: 0
+    m_Bits: 8
+  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
+  rayLength: 0.2
 --- !u!1 &2273213684970023261
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +485,7 @@ GameObject:
   - component: {fileID: 8154781752774911420}
   - component: {fileID: 6009049782777943981}
   - component: {fileID: 130047040828096792}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bowling pin (8)
   m_TagString: Pin
   m_Icon: {fileID: 0}
@@ -609,7 +606,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &130047040828096792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,12 +623,11 @@ MonoBehaviour:
   beenHit: 0
   pointGranted: 0
   pointCounter: {fileID: 0}
-  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.6
-  groundLayer:
+  groundlayer:
     serializedVersion: 2
-    m_Bits: 0
-  isGrounded: 0
+    m_Bits: 8
+  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
+  rayLength: 0.2
 --- !u!1 &2632389221258982268
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,7 +642,7 @@ GameObject:
   - component: {fileID: 3790962133434441488}
   - component: {fileID: 2914708801697705085}
   - component: {fileID: 663049370035992650}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bowling pin
   m_TagString: Pin
   m_Icon: {fileID: 0}
@@ -767,7 +763,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &663049370035992650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,12 +780,11 @@ MonoBehaviour:
   beenHit: 0
   pointGranted: 0
   pointCounter: {fileID: 0}
-  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.6
-  groundLayer:
+  groundlayer:
     serializedVersion: 2
-    m_Bits: 0
-  isGrounded: 0
+    m_Bits: 8
+  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
+  rayLength: 0.2
 --- !u!1 &3042505517619322679
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +854,7 @@ GameObject:
   - component: {fileID: 5937650383500654973}
   - component: {fileID: 6467910247856141240}
   - component: {fileID: 9132454793917460164}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bowling pin (6)
   m_TagString: Pin
   m_Icon: {fileID: 0}
@@ -980,7 +975,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &9132454793917460164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,12 +992,11 @@ MonoBehaviour:
   beenHit: 0
   pointGranted: 0
   pointCounter: {fileID: 0}
-  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.6
-  groundLayer:
+  groundlayer:
     serializedVersion: 2
-    m_Bits: 0
-  isGrounded: 0
+    m_Bits: 8
+  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
+  rayLength: 0.2
 --- !u!1 &3385312079025320874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,7 +1011,7 @@ GameObject:
   - component: {fileID: 7140370584283727599}
   - component: {fileID: 1144747336534747434}
   - component: {fileID: 8213153826785856781}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bowling pin (3)
   m_TagString: Pin
   m_Icon: {fileID: 0}
@@ -1138,7 +1132,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &8213153826785856781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,12 +1149,11 @@ MonoBehaviour:
   beenHit: 0
   pointGranted: 0
   pointCounter: {fileID: 0}
-  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.6
-  groundLayer:
+  groundlayer:
     serializedVersion: 2
-    m_Bits: 0
-  isGrounded: 0
+    m_Bits: 8
+  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
+  rayLength: 0.2
 --- !u!1 &5243803027465989848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1168,7 @@ GameObject:
   - component: {fileID: 7360845617656429272}
   - component: {fileID: 1854528580676887965}
   - component: {fileID: 5524116157290813719}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bowling pin (9)
   m_TagString: Pin
   m_Icon: {fileID: 0}
@@ -1296,7 +1289,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &5524116157290813719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1313,12 +1306,11 @@ MonoBehaviour:
   beenHit: 0
   pointGranted: 0
   pointCounter: {fileID: 0}
-  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.6
-  groundLayer:
+  groundlayer:
     serializedVersion: 2
-    m_Bits: 0
-  isGrounded: 0
+    m_Bits: 8
+  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
+  rayLength: 0.2
 --- !u!1 &6205420162641282330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,7 +1325,7 @@ GameObject:
   - component: {fileID: 4192950079112812123}
   - component: {fileID: 3273324156797927435}
   - component: {fileID: 7521825769721815606}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bowling pin (2)
   m_TagString: Pin
   m_Icon: {fileID: 0}
@@ -1454,7 +1446,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &7521825769721815606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1471,12 +1463,11 @@ MonoBehaviour:
   beenHit: 0
   pointGranted: 0
   pointCounter: {fileID: 0}
-  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.6
-  groundLayer:
+  groundlayer:
     serializedVersion: 2
-    m_Bits: 0
-  isGrounded: 0
+    m_Bits: 8
+  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
+  rayLength: 0.2
 --- !u!1 &8350151058519914058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,7 +1482,7 @@ GameObject:
   - component: {fileID: 4450326729885743692}
   - component: {fileID: 6825463505675333204}
   - component: {fileID: 7756778251763485211}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bowling pin (4)
   m_TagString: Pin
   m_Icon: {fileID: 0}
@@ -1612,7 +1603,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &7756778251763485211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1629,9 +1620,8 @@ MonoBehaviour:
   beenHit: 0
   pointGranted: 0
   pointCounter: {fileID: 0}
-  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.6
-  groundLayer:
+  groundlayer:
     serializedVersion: 2
-    m_Bits: 0
-  isGrounded: 0
+    m_Bits: 8
+  pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
+  rayLength: 0.2

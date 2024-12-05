@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 559802065}
   - component: {fileID: 559802064}
   m_Layer: 0
-  m_Name: Quad (1)
+  m_Name: DeathPlane
   m_TagString: DeathPlane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1018,6 +1018,33 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   m_PrefabInstance: {fileID: 5400221392280288664}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &714254193
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714254187}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2
 --- !u!1 &829048129 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8298045291338814966, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
@@ -1086,6 +1113,10 @@ PrefabInstance:
     - target: {fileID: 1942063900347903367, guid: 10a222cea2d3c594780615da7449b871, type: 3}
       propertyPath: m_Name
       value: BowlingLane
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942063900347903367, guid: 10a222cea2d3c594780615da7449b871, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1442,7 +1473,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!135 &966335953
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1672,8 +1703,8 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 0
-  ballSpawn: {x: -1.5, y: 0.5, z: 0}
+  m_FarAttachMode: 1
+  ballSpawn: {x: 0, y: 0.5, z: -20}
   startDeathTimer: 0
   deathTimer: 0
   startTime: 10
@@ -1998,7 +2029,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 714254193}
   m_SourcePrefab: {fileID: 100100000, guid: 362074e954655d74795b3c05775f6570, type: 3}
 --- !u!1001 &8950996100665002533
 PrefabInstance:
