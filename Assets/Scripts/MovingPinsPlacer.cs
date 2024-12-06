@@ -10,6 +10,7 @@ public class MovingPinsPlacer : MonoBehaviour
 
     public float moveDuration;
     public float waitTime;
+    public float placeWaitTime;
 
     public GameObject pinPreFab;
     public GameObject pinHolderClone;
@@ -18,7 +19,12 @@ public class MovingPinsPlacer : MonoBehaviour
     {
         DeployPins();
     }
+    public void DeployPinsDelay()
+    {
 
+        Invoke(nameof(DeployPins), placeWaitTime);
+
+    }
     public void DeployPins()
     {
         Destroy(pinHolderClone);

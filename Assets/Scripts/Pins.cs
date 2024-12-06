@@ -12,6 +12,7 @@ public class Pins : MonoBehaviour
     public LayerMask groundlayer;
 
     public GameObject pinPuller;
+    public Vector3 raySpawn;
 
     public float rayLength; // How far the ray should check
     // Start is called before the first frame update
@@ -28,18 +29,16 @@ public class Pins : MonoBehaviour
     {
         if (beenHit == true && pointGranted == false && pinPuller.GetComponent<PinPuller>().pulling == false)
         {
-          Ray ray = new Ray(transform.position, -transform.up);
+            raySpawn = transform.position;
+            raySpawn.y += 0.05f;
+
+          Ray ray = new Ray(raySpawn, -transform.up);
          
            
-            if (Physics.Raycast(ray, out RaycastHit hit, rayLength, groundlayer))
-            {
-                //You suck
-
-            }
-            else
+            if (!Physics.Raycast(ray, out RaycastHit hit, rayLength, groundlayer))
             {
                 print("point");
-                pointCounter.GetComponent<Points>().lv1Points += 1;
+                pointCounter.GetComponent<Points>().points += 1;
                 pointGranted = true;
             }
         }

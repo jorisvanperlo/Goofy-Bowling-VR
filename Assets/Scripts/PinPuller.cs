@@ -58,7 +58,7 @@ public class PinPuller : MonoBehaviour
                 {
                     points = new Vector3[] {top};
                     currentPointIndex = 0; // Restart the sequence
-                    
+                   
                 }
             }
         }

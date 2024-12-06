@@ -17,6 +17,7 @@ public class BowlingBall : XRGrabInteractable
     public int attemptedAmount;
 
     public GameObject pinPuller;
+    public GameObject pinPlacer;
 
     public bool isBeingHeld;
     public UnityEvent OnLetGo;
@@ -47,6 +48,7 @@ public class BowlingBall : XRGrabInteractable
         if (collision.gameObject.tag == "DeathPlane")
         {
             pinPuller.GetComponent<PinPuller>().PullPinDelay();
+            pinPlacer.GetComponent<MovingPinsPlacer>().DeployPinsDelay();
             RespawnBall();
             startDeathTimer = false;
             deathTimer = startTime;

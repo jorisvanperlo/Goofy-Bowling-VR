@@ -156,7 +156,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.2
+  raySpawn: {x: 0, y: 0, z: 0}
+  rayLength: 0.1
 --- !u!1 &1198140047978128200
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +314,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.2
+  raySpawn: {x: 0, y: 0, z: 0}
+  rayLength: 0.1
 --- !u!1 &1390089935528746270
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +472,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.2
+  raySpawn: {x: 0, y: 0, z: 0}
+  rayLength: 0.1
 --- !u!1 &2273213684970023261
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +630,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.2
+  raySpawn: {x: 0, y: 0, z: 0}
+  rayLength: 0.1
 --- !u!1 &2632389221258982268
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +788,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.2
+  raySpawn: {x: 0, y: 0, z: 0}
+  rayLength: 0.1
 --- !u!1 &3042505517619322679
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +1001,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.2
+  raySpawn: {x: 0, y: 0, z: 0}
+  rayLength: 0.1
 --- !u!1 &3385312079025320874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,7 +1159,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.2
+  raySpawn: {x: 0, y: 0, z: 0}
+  rayLength: 0.1
 --- !u!1 &5243803027465989848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,7 +1317,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.2
+  raySpawn: {x: 0, y: 0, z: 0}
+  rayLength: 0.1
 --- !u!1 &6205420162641282330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,7 +1475,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.2
+  raySpawn: {x: 0, y: 0, z: 0}
+  rayLength: 0.1
 --- !u!1 &8350151058519914058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,4 +1633,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
-  rayLength: 0.2
+  raySpawn: {x: 0, y: 0, z: 0}
+  rayLength: 0.1

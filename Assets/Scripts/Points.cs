@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class Points : MonoBehaviour
 {
-    public int lv1Points;
-    public int lv2Points;
-    public int lv1PointReq;
-    public int lv2PointReq;
-    
+    public int points;
+    public int pointReq;
     void Start()
     {
 
@@ -16,16 +13,13 @@ public class Points : MonoBehaviour
 
     void Update()
     {
-        if (lv1Points >= lv1PointReq)
+        if (points >= pointReq)
         {
 
 
 
 
-            if (lv2Points >= lv2PointReq)
-            {
 
-            }
         }
     }
 }
