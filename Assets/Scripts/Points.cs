@@ -15,11 +15,7 @@ public class Points : MonoBehaviour
     {
         if (points >= pointReq)
         {
-
-
-
-
-
+            //you won next level
         }
     }
 }
