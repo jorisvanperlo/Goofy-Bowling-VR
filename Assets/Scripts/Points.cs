@@ -6,6 +6,9 @@ public class Points : MonoBehaviour
 {
     public int points;
     public int pointReq;
+
+    public float ballsThrown;
+    public float attemptAmount;
     void Start()
     {
 
@@ -16,6 +19,12 @@ public class Points : MonoBehaviour
         if (points >= pointReq)
         {
             //you won next level
+        }
+        if (ballsThrown >= attemptAmount)
+        {
+            points = 0;
+            ballsThrown = 0;
+            //Reset game with UI
         }
     }
 }
