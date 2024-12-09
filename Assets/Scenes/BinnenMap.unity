@@ -49788,6 +49788,7 @@ MonoBehaviour:
   ballsThrown: 0
   attemptedAmount: 0
   pinPuller: {fileID: 818384259}
+  pinPlacer: {fileID: 0}
   isBeingHeld: 0
   OnLetGo:
     m_PersistentCalls:

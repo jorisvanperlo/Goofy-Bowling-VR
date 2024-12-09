@@ -14,13 +14,13 @@ public class BowlingBall : XRGrabInteractable
     public float deathTimer;
     public float startTime;
     public int ballsThrown;
-    public int attemptedAmount;
 
     public GameObject pinPuller;
     public GameObject pinPlacer;
 
     public bool isBeingHeld;
     public UnityEvent OnLetGo;
+    public GameObject pointCounter;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +38,7 @@ public class BowlingBall : XRGrabInteractable
             {
                 startDeathTimer = false;
                 deathTimer = startTime;
+                RespawnBall();
                 
             }
         }
@@ -57,11 +58,8 @@ public class BowlingBall : XRGrabInteractable
 
     private void RespawnBall()
     {
-        if (ballsThrown >= attemptedAmount)
-        {
-            transform.position = ballSpawn;
-            //Reset game
-        }
+        pointCounter.GetComponent<Points>().ballsThrown += 1;
+        transform.position = ballSpawn;
     }
 
     
@@ -88,7 +86,6 @@ public class BowlingBall : XRGrabInteractable
             if (isBeingHeld == true)
             {
                 startDeathTimer = true;
-                ballsThrown += 1;
             }
             
             isBeingHeld = false;
