@@ -185,6 +185,59 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7241807925345575531, guid: db7bb44ae0061c241a28b8fdb2bae65a, type: 3}
   m_PrefabInstance: {fileID: 5359581243017373520}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &256983418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 256983420}
+  - component: {fileID: 256983419}
+  m_Layer: 0
+  m_Name: BallDetector
+  m_TagString: BallDetector
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &256983419
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256983418}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.69416785, z: 1.5077896}
+  m_Center: {x: 0, y: 0.0637514, z: -0.2981758}
+--- !u!4 &256983420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256983418}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.2, z: -23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &307747176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,6 +1411,7 @@ GameObject:
   - component: {fileID: 966335952}
   - component: {fileID: 966335957}
   - component: {fileID: 966335958}
+  - component: {fileID: 966335959}
   m_Layer: 0
   m_Name: BowlingBall
   m_TagString: Ball
@@ -1373,7 +1427,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966335950}
   serializedVersion: 4
-  m_Mass: 2.7
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1472,7 +1526,7 @@ Transform:
   m_GameObject: {fileID: 966335950}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.42, y: 0, z: 0.488}
+  m_LocalPosition: {x: 0.063, y: 0.36, z: -4.558}
   m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1622,18 +1676,47 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
-  ballSpawn: {x: 1, y: 0.5, z: 0}
+  ballSpawn: {x: 0, y: 0.5, z: -4.558}
   startDeathTimer: 0
   deathTimer: 0
   startTime: 10
   ballsThrown: 0
-  attemptedAmount: 0
   pinPuller: {fileID: 714254187}
   pinPlacer: {fileID: 167653490}
   isBeingHeld: 0
   OnLetGo:
     m_PersistentCalls:
       m_Calls: []
+  pointCounter: {fileID: 461154152}
+  rb: {fileID: 966335952}
+  gutterSpeed: 5
+  ball: {fileID: 966335950}
+  normalWeight: 5
+  makeBallBig: 0
+  bigWeight: 30
+  makeBallSmall: 0
+  smallWeight: 1
+--- !u!114 &966335959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966335950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8965cd0d09b9ca43999e327fbfe6281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ball: {fileID: 966335950}
+  rb: {fileID: 0}
+  normalSize: {x: 0.25, y: 0.25, z: 0.25}
+  largeSize: {x: 0.5, y: 0.5, z: 0.5}
+  smallSize: {x: 0.1, y: 0.1, z: 0.1}
+  lerpDuration: 1
+  shouldGrow: 0
+  shouldShrink: 0
+  growTime: 0
 --- !u!1 &1026683335 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2103429641636942565, guid: fee49697bda624148b1829df624ef19a, type: 3}
@@ -1661,6 +1744,59 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2460799034836549948, guid: ec8fe1d7aaed8b341b37e149cc4e61ac, type: 3}
+--- !u!1 &1080827594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080827595}
+  - component: {fileID: 1080827596}
+  m_Layer: 0
+  m_Name: RightGutterAccelarator
+  m_TagString: GutterAccel
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080827595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080827594}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.72611, y: -0.057, z: -13.625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1080827596
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080827594}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25, y: 0.09638982, z: 19.576677}
+  m_Center: {x: 0, y: 0.013137545, z: 0}
 --- !u!4 &1167561888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3856997484512571336, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
@@ -1855,6 +1991,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dfc52297b5e84a14b8b16735a10507f8, type: 3}
   m_PrefabInstance: {fileID: 119801991}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2003046416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2003046418}
+  - component: {fileID: 2003046417}
+  m_Layer: 0
+  m_Name: LeftGutterAccelarator
+  m_TagString: GutterAccel
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2003046417
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003046416}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25, y: 0.09638982, z: 19.576677}
+  m_Center: {x: 0, y: 0.013137545, z: 0}
+--- !u!4 &2003046418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003046416}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.72611, y: -0.057, z: -13.625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5359581243017373520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2000,6 +2189,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2516890642258462169, guid: 911b48acb92fe5f4dad05aca12778051, type: 3}
+      propertyPath: pointReq
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2516890642258462169, guid: 911b48acb92fe5f4dad05aca12778051, type: 3}
+      propertyPath: nextScene
+      value: BinnenMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 2516890642258462169, guid: 911b48acb92fe5f4dad05aca12778051, type: 3}
+      propertyPath: attemptAmount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3421439976759187488, guid: 911b48acb92fe5f4dad05aca12778051, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2064,3 +2265,6 @@ SceneRoots:
   - {fileID: 5400221392280288664}
   - {fileID: 5359581243017373520}
   - {fileID: 534567458}
+  - {fileID: 1080827595}
+  - {fileID: 2003046418}
+  - {fileID: 256983420}

@@ -9,6 +9,8 @@ TagManager:
   - DeathPlane
   - Anchor
   - PinPuller
+  - GutterAccel
+  - BallDetector
   layers:
   - Default
   - TransparentFX

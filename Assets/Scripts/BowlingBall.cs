@@ -21,7 +21,23 @@ public class BowlingBall : XRGrabInteractable
     public bool isBeingHeld;
     public UnityEvent OnLetGo;
     public GameObject pointCounter;
-    // Start is called before the first frame update
+
+    public Rigidbody rb;
+    public float gutterSpeed;
+
+    //----PowerUps---//
+    public GameObject ball;
+
+    public float normalWeight;
+
+    public bool makeBallBig;
+    public float bigWeight;
+
+    public bool makeBallSmall;
+    public float smallWeight;
+
+    public bool dubblePoints;
+
     void Start()
     {
         transform.position = ballSpawn;
@@ -53,6 +69,10 @@ public class BowlingBall : XRGrabInteractable
             RespawnBall();
             startDeathTimer = false;
             deathTimer = startTime;
+
+            rb.mass = normalWeight;
+            transform.localScale = new Vector3(1, 1, 1);
+            pointCounter.GetComponent<Points>().dubblePoints = false;
         }
     }
 
@@ -86,9 +106,32 @@ public class BowlingBall : XRGrabInteractable
             if (isBeingHeld == true)
             {
                 startDeathTimer = true;
+                if (makeBallBig == true)
+                {
+                    ball.GetComponent<BallPowerUps>().BallGrow();
+                    rb.mass = bigWeight;
+                    makeBallBig = false;
+                }
+                if (makeBallSmall == true)
+                {
+                    ball.GetComponent<BallPowerUps>().BallShrink();
+                    rb.mass = smallWeight;
+                    makeBallSmall = false;
+                }
+                if (dubblePoints == true)
+                {
+                    pointCounter.GetComponent <Points>().dubblePoints = true;
+                }
             }
-            
             isBeingHeld = false;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "GutterAccel")
+        {
+            rb.AddForce(-Vector3.forward * gutterSpeed);
         }
     }
 }

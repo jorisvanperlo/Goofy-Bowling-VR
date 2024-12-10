@@ -38,7 +38,7 @@ public class Pins : MonoBehaviour
             if (!Physics.Raycast(ray, out RaycastHit hit, rayLength, groundlayer))
             {
                 print("point");
-                pointCounter.GetComponent<Points>().points += 1;
+                pointCounter.GetComponent<Points>().AddPoint();
                 pointGranted = true;
             }
         }

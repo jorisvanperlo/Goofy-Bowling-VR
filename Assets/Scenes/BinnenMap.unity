@@ -17126,6 +17126,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1849373597}
     m_Modifications:
+    - target: {fileID: 2516890642258462169, guid: 911b48acb92fe5f4dad05aca12778051, type: 3}
+      propertyPath: pointReq
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2516890642258462169, guid: 911b48acb92fe5f4dad05aca12778051, type: 3}
+      propertyPath: nextScene
+      value: GameScene
+      objectReference: {fileID: 0}
     - target: {fileID: 3421439976759187488, guid: 911b48acb92fe5f4dad05aca12778051, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.546997
@@ -49786,13 +49794,13 @@ MonoBehaviour:
   deathTimer: 0
   startTime: 10
   ballsThrown: 0
-  attemptedAmount: 0
   pinPuller: {fileID: 818384259}
   pinPlacer: {fileID: 0}
   isBeingHeld: 0
   OnLetGo:
     m_PersistentCalls:
       m_Calls: []
+  pointCounter: {fileID: 0}
 --- !u!114 &1738777000
 MonoBehaviour:
   m_ObjectHideFlags: 0
