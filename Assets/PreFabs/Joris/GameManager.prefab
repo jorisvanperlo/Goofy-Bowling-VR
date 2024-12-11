@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4817835266295310424
+--- !u!1 &890553607652275994
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3421439976759187488}
-  - component: {fileID: 2516890642258462169}
+  - component: {fileID: 1308257388453079258}
+  - component: {fileID: 180230341257645927}
   m_Layer: 0
-  m_Name: PointCounter
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3421439976759187488
+--- !u!4 &1308257388453079258
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4817835266295310424}
+  m_GameObject: {fileID: 890553607652275994}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,19 +32,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2516890642258462169
+--- !u!114 &180230341257645927
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4817835266295310424}
+  m_GameObject: {fileID: 890553607652275994}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3064d8c568ebf12428a7000dcd6a7ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lv1Points: 0
-  lv2Points: 0
-  lv1PointReq: 10
-  lv2PointReq: 10
+  pinsPlacer: {fileID: 0}
+  pinPuller: {fileID: 0}
+  ball: {fileID: 0}
+  points: 0
+  pointReq: 40
+  ballsThrown: 0
+  attemptAmount: 5
+  nextScene: BinnenMap
+  pinGrow: 1
+  pinShrink: 0
+  ballGrow: 0
+  ballShrink: 0
+  dubblePoints: 0

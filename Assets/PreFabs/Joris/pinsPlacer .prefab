@@ -96,10 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd3cca9895990b40aa8b78c4b2a8aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top: {x: 0, y: 1.5, z: -23.17}
-  bottom: {x: 0, y: 0.2, z: -23.17}
+  top: {x: 0, y: 1.4, z: -23.17}
+  bottom: {x: 0, y: 0.12, z: -23.17}
   reachBottom: 0
   moveDuration: 2
   waitTime: 1
+  placeWaitTime: 4.5
   pinPreFab: {fileID: 3042505517619322679, guid: 7cc9aacd4a6f4ec47992ac052b03130b, type: 3}
   pinHolderClone: {fileID: 0}

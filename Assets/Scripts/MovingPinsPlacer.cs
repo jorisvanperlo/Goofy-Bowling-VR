@@ -17,13 +17,11 @@ public class MovingPinsPlacer : MonoBehaviour
 
     void Start()
     {
-        DeployPins();
+       
     }
     public void DeployPinsDelay()
     {
-
         Invoke(nameof(DeployPins), placeWaitTime);
-
     }
     public void DeployPins()
     {

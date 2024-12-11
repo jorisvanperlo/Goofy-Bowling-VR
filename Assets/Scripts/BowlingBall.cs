@@ -20,7 +20,7 @@ public class BowlingBall : XRGrabInteractable
 
     public bool isBeingHeld;
     public UnityEvent OnLetGo;
-    public GameObject pointCounter;
+    public GameObject GameManager;
 
     public Rigidbody rb;
     public float gutterSpeed;
@@ -55,7 +55,6 @@ public class BowlingBall : XRGrabInteractable
                 startDeathTimer = false;
                 deathTimer = startTime;
                 RespawnBall();
-                
             }
         }
     }
@@ -64,26 +63,21 @@ public class BowlingBall : XRGrabInteractable
     {
         if (collision.gameObject.tag == "DeathPlane")
         {
-            pinPuller.GetComponent<PinPuller>().PullPinDelay();
-            pinPlacer.GetComponent<MovingPinsPlacer>().DeployPinsDelay();
-            RespawnBall();
+            GameManager.GetComponent<GameManager>().SetupFreshLane();
             startDeathTimer = false;
             deathTimer = startTime;
-
-            rb.mass = normalWeight;
-            transform.localScale = new Vector3(1, 1, 1);
-            pointCounter.GetComponent<Points>().dubblePoints = false;
         }
     }
 
-    private void RespawnBall()
+    public void RespawnBall()
     {
-        pointCounter.GetComponent<Points>().ballsThrown += 1;
+        GameManager.GetComponent<GameManager>().BallTrown();
         transform.position = ballSpawn;
+
+        rb.mass = normalWeight;
+        transform.localScale = new Vector3(1, 1, 1);
+        GameManager.GetComponent<GameManager>().dubblePoints = false;
     }
-
-    
-
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
@@ -117,10 +111,6 @@ public class BowlingBall : XRGrabInteractable
                     ball.GetComponent<BallPowerUps>().BallShrink();
                     rb.mass = smallWeight;
                     makeBallSmall = false;
-                }
-                if (dubblePoints == true)
-                {
-                    pointCounter.GetComponent <Points>().dubblePoints = true;
                 }
             }
             isBeingHeld = false;

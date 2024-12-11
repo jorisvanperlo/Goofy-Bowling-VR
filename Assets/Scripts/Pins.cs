@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Pins : MonoBehaviour
@@ -8,49 +9,100 @@ public class Pins : MonoBehaviour
     public Rigidbody rb;
     public bool beenHit;
     public bool pointGranted;
-    public GameObject pointCounter;
+    public GameObject gameManager;
     public LayerMask groundlayer;
 
     public GameObject pinPuller;
     public Vector3 raySpawn;
+    public float rayLength;
 
-    public float rayLength; // How far the ray should check
-    // Start is called before the first frame update
+    public float largeScale;
+    public float smallScale;
+    public float targetScale;
+    public float scaleTime;
+
+    public float waitTime;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = true;
+        gameManager = GameObject.Find("GameManager");
+        StartCoroutine(PowerUpsCheck());
+    }
+    public IEnumerator PowerUpsCheck()
+    {
+        if (gameManager.GetComponent<GameManager>().pinGrow)
+        {
+            targetScale = largeScale;
+            yield return new WaitForSeconds(waitTime);
+            StartCoroutine(ScalePinOverTime());
+        }
+        if (gameManager.GetComponent<GameManager>().pinShrink)
+        {
+            targetScale = smallScale;
+            yield return new WaitForSeconds(waitTime);
+            StartCoroutine(ScalePinOverTime());
+        }
+    }
+    public IEnumerator ScalePinOverTime()
+    {
+        gameManager.GetComponent<GameManager>().pinGrow = false;
+        gameManager.GetComponent<GameManager>().pinShrink = false;
 
-        pointCounter = GameObject.Find("PointCounter");
+        print("Scale pin");
+
+        float addToScale = 1f;
+        if (transform.localScale.x > targetScale)
+        {
+            addToScale --;
+        }
+        bool canScale = true;
+        Vector3 targetScaleVector = new Vector3(targetScale, targetScale, targetScale);
+        while (canScale)
+        {
+            transform.localScale += (new Vector3(1, 1, 1) * addToScale) * Time.deltaTime * scaleTime;
+            if (Vector3.Distance(transform.localScale, targetScaleVector) < 0.1f)
+            {
+                transform.localScale = targetScaleVector;
+                canScale = false;
+            }
+            yield return null;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (beenHit == true && pointGranted == false && pinPuller.GetComponent<PinPuller>().pulling == false)
+        CheckIffCanAddPoints();
+    }
+
+    void CheckIffCanAddPoints()
+    {
+        if (beenHit && !pointGranted && !pinPuller.GetComponent<PinPuller>().pulling)
         {
             raySpawn = transform.position;
             raySpawn.y += 0.05f;
 
-          Ray ray = new Ray(raySpawn, -transform.up);
-         
-           
+            Ray ray = new Ray(raySpawn, -transform.up);
+
+
             if (!Physics.Raycast(ray, out RaycastHit hit, rayLength, groundlayer))
             {
-                print("point");
-                pointCounter.GetComponent<Points>().AddPoint();
+                gameManager.GetComponent<GameManager>().AddPoint();
                 pointGranted = true;
             }
         }
     }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ball" || collision.gameObject.tag == "Pin" )
+        if (collision.gameObject.tag == "Ball" || collision.gameObject.tag == "Pin")
         {
-            
             rb.isKinematic = false;
             beenHit = true;
         }
+
         if (collision.gameObject.tag == "DeathPlane" || collision.gameObject.tag == "PinPuller")
         {
             Destroy(gameObject);

@@ -26,9 +26,7 @@ public class PinPuller : MonoBehaviour
 
     public void PullPinDelay()
     {
-        
         Invoke(nameof(PullPins), waitTime);
-        
     }
     public void PullPins()
     {

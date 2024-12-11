@@ -151,13 +151,18 @@ MonoBehaviour:
   rb: {fileID: 4137410529623510213}
   beenHit: 0
   pointGranted: 0
-  pointCounter: {fileID: 0}
+  gameManager: {fileID: 0}
   groundlayer:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
   rayLength: 0.1
+  largeScale: 1.4
+  smallScale: 0.7
+  targetScale: 0
+  scaleTime: 1
+  waitTime: 4.5
 --- !u!1 &1198140047978128200
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,13 +314,18 @@ MonoBehaviour:
   rb: {fileID: 501577538993215146}
   beenHit: 0
   pointGranted: 0
-  pointCounter: {fileID: 0}
+  gameManager: {fileID: 0}
   groundlayer:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
   rayLength: 0.1
+  largeScale: 1.4
+  smallScale: 0.7
+  targetScale: 0
+  scaleTime: 1
+  waitTime: 4.5
 --- !u!1 &1390089935528746270
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,13 +477,18 @@ MonoBehaviour:
   rb: {fileID: 1725314754908897475}
   beenHit: 0
   pointGranted: 0
-  pointCounter: {fileID: 0}
+  gameManager: {fileID: 0}
   groundlayer:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
   rayLength: 0.1
+  largeScale: 1.4
+  smallScale: 0.7
+  targetScale: 0
+  scaleTime: 1
+  waitTime: 4.5
 --- !u!1 &2273213684970023261
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,13 +640,18 @@ MonoBehaviour:
   rb: {fileID: 6009049782777943981}
   beenHit: 0
   pointGranted: 0
-  pointCounter: {fileID: 0}
+  gameManager: {fileID: 0}
   groundlayer:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
   rayLength: 0.1
+  largeScale: 1.4
+  smallScale: 0.7
+  targetScale: 0
+  scaleTime: 1
+  waitTime: 4.5
 --- !u!1 &2632389221258982268
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,13 +803,18 @@ MonoBehaviour:
   rb: {fileID: 2914708801697705085}
   beenHit: 0
   pointGranted: 0
-  pointCounter: {fileID: 0}
+  gameManager: {fileID: 0}
   groundlayer:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
   rayLength: 0.1
+  largeScale: 1.4
+  smallScale: 0.7
+  targetScale: 0
+  scaleTime: 1
+  waitTime: 4.5
 --- !u!1 &3042505517619322679
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,13 +1007,18 @@ MonoBehaviour:
   rb: {fileID: 6467910247856141240}
   beenHit: 0
   pointGranted: 0
-  pointCounter: {fileID: 0}
+  gameManager: {fileID: 0}
   groundlayer:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
   rayLength: 0.1
+  largeScale: 1.4
+  smallScale: 0.7
+  targetScale: 0
+  scaleTime: 1
+  waitTime: 4.5
 --- !u!1 &3385312079025320874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,13 +1170,18 @@ MonoBehaviour:
   rb: {fileID: 1144747336534747434}
   beenHit: 0
   pointGranted: 0
-  pointCounter: {fileID: 0}
+  gameManager: {fileID: 0}
   groundlayer:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
   rayLength: 0.1
+  largeScale: 1.4
+  smallScale: 0.7
+  targetScale: 0
+  scaleTime: 1
+  waitTime: 4.5
 --- !u!1 &5243803027465989848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,13 +1333,18 @@ MonoBehaviour:
   rb: {fileID: 1854528580676887965}
   beenHit: 0
   pointGranted: 0
-  pointCounter: {fileID: 0}
+  gameManager: {fileID: 0}
   groundlayer:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
   rayLength: 0.1
+  largeScale: 1.4
+  smallScale: 0.7
+  targetScale: 0
+  scaleTime: 1
+  waitTime: 4.5
 --- !u!1 &6205420162641282330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,13 +1496,18 @@ MonoBehaviour:
   rb: {fileID: 3273324156797927435}
   beenHit: 0
   pointGranted: 0
-  pointCounter: {fileID: 0}
+  gameManager: {fileID: 0}
   groundlayer:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
   rayLength: 0.1
+  largeScale: 1.4
+  smallScale: 0.7
+  targetScale: 0
+  scaleTime: 1
+  waitTime: 4.5
 --- !u!1 &8350151058519914058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,10 +1659,15 @@ MonoBehaviour:
   rb: {fileID: 6825463505675333204}
   beenHit: 0
   pointGranted: 0
-  pointCounter: {fileID: 0}
+  gameManager: {fileID: 0}
   groundlayer:
     serializedVersion: 2
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
   rayLength: 0.1
+  largeScale: 1.4
+  smallScale: 0.7
+  targetScale: 0
+  scaleTime: 1
+  waitTime: 4.5
