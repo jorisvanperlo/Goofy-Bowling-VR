@@ -1358,7 +1358,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966335950}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 15
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1396,7 +1396,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.11
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &966335954
 MeshRenderer:
@@ -1418,7 +1418,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 383f0b4386a7f9f4ea4f9fd486364558, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1447,7 +1447,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966335950}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4711208715938537054, guid: 407f58a5902132646acd757072e86aa6, type: 3}
 --- !u!4 &966335956
 Transform:
   m_ObjectHideFlags: 0
@@ -1456,9 +1456,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966335950}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.063, y: 0.36, z: -4.558}
-  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -2088,6 +2088,10 @@ PrefabInstance:
       propertyPath: ball
       value: 
       objectReference: {fileID: 966335950}
+    - target: {fileID: 180230341257645927, guid: 3e0ea4e14b45ebe4e84a7a0a12a0bade, type: 3}
+      propertyPath: pinGrow
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 180230341257645927, guid: 3e0ea4e14b45ebe4e84a7a0a12a0bade, type: 3}
       propertyPath: pinPuller
       value: 

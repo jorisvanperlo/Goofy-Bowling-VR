@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6440942619016034444}
   m_Layer: 3
   m_Name: Bowling_Lane_Lane
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 1094850100593834913}
   m_Layer: 0
   m_Name: Bowling_Lane
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

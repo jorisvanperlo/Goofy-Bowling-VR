@@ -117,7 +117,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170529254392462260}
   serializedVersion: 4
-  m_Mass: 0.3
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -157,12 +157,13 @@ MonoBehaviour:
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
-  rayLength: 0.1
+  rayLength: 0.07
   largeScale: 1.4
   smallScale: 0.7
   targetScale: 0
   scaleTime: 1
   waitTime: 4.5
+  rbWaitTime: 4.4
 --- !u!1 &1198140047978128200
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +281,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198140047978128200}
   serializedVersion: 4
-  m_Mass: 0.3
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -320,12 +321,13 @@ MonoBehaviour:
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
-  rayLength: 0.1
+  rayLength: 0.07
   largeScale: 1.4
   smallScale: 0.7
   targetScale: 0
   scaleTime: 1
   waitTime: 4.5
+  rbWaitTime: 4.4
 --- !u!1 &1390089935528746270
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,7 +445,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390089935528746270}
   serializedVersion: 4
-  m_Mass: 0.3
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -483,12 +485,13 @@ MonoBehaviour:
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
-  rayLength: 0.1
+  rayLength: 0.07
   largeScale: 1.4
   smallScale: 0.7
   targetScale: 0
   scaleTime: 1
   waitTime: 4.5
+  rbWaitTime: 4.4
 --- !u!1 &2273213684970023261
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +609,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2273213684970023261}
   serializedVersion: 4
-  m_Mass: 0.3
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -646,12 +649,13 @@ MonoBehaviour:
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
-  rayLength: 0.1
+  rayLength: 0.07
   largeScale: 1.4
   smallScale: 0.7
   targetScale: 0
   scaleTime: 1
   waitTime: 4.5
+  rbWaitTime: 4.4
 --- !u!1 &2632389221258982268
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,7 +773,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2632389221258982268}
   serializedVersion: 4
-  m_Mass: 0.3
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -809,12 +813,13 @@ MonoBehaviour:
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
-  rayLength: 0.1
+  rayLength: 0.07
   largeScale: 1.4
   smallScale: 0.7
   targetScale: 0
   scaleTime: 1
   waitTime: 4.5
+  rbWaitTime: 4.4
 --- !u!1 &3042505517619322679
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,7 +978,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3134663320787822706}
   serializedVersion: 4
-  m_Mass: 0.3
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1013,12 +1018,13 @@ MonoBehaviour:
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
-  rayLength: 0.1
+  rayLength: 0.07
   largeScale: 1.4
   smallScale: 0.7
   targetScale: 0
   scaleTime: 1
   waitTime: 4.5
+  rbWaitTime: 4.4
 --- !u!1 &3385312079025320874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,7 +1142,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3385312079025320874}
   serializedVersion: 4
-  m_Mass: 0.3
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1176,12 +1182,13 @@ MonoBehaviour:
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
-  rayLength: 0.1
+  rayLength: 0.07
   largeScale: 1.4
   smallScale: 0.7
   targetScale: 0
   scaleTime: 1
   waitTime: 4.5
+  rbWaitTime: 4.4
 --- !u!1 &5243803027465989848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,7 +1306,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5243803027465989848}
   serializedVersion: 4
-  m_Mass: 0.3
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1339,12 +1346,13 @@ MonoBehaviour:
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
-  rayLength: 0.1
+  rayLength: 0.07
   largeScale: 1.4
   smallScale: 0.7
   targetScale: 0
   scaleTime: 1
   waitTime: 4.5
+  rbWaitTime: 4.4
 --- !u!1 &6205420162641282330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,7 +1470,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6205420162641282330}
   serializedVersion: 4
-  m_Mass: 0.3
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1502,12 +1510,13 @@ MonoBehaviour:
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
-  rayLength: 0.1
+  rayLength: 0.07
   largeScale: 1.4
   smallScale: 0.7
   targetScale: 0
   scaleTime: 1
   waitTime: 4.5
+  rbWaitTime: 4.4
 --- !u!1 &8350151058519914058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,7 +1634,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8350151058519914058}
   serializedVersion: 4
-  m_Mass: 0.3
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1665,9 +1674,10 @@ MonoBehaviour:
     m_Bits: 8
   pinPuller: {fileID: 8043493995746334668, guid: 362074e954655d74795b3c05775f6570, type: 3}
   raySpawn: {x: 0, y: 0, z: 0}
-  rayLength: 0.1
+  rayLength: 0.07
   largeScale: 1.4
   smallScale: 0.7
   targetScale: 0
   scaleTime: 1
   waitTime: 4.5
+  rbWaitTime: 4.4

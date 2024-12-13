@@ -11,6 +11,7 @@ TagManager:
   - PinPuller
   - GutterAccel
   - BallDetector
+  - Floor
   layers:
   - Default
   - TransparentFX

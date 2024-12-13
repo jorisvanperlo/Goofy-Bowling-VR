@@ -22,6 +22,7 @@ public class Pins : MonoBehaviour
     public float scaleTime;
 
     public float waitTime;
+    public float rbWaitTime;
 
 
     void Start()
@@ -30,6 +31,8 @@ public class Pins : MonoBehaviour
         rb.isKinematic = true;
         gameManager = GameObject.Find("GameManager");
         StartCoroutine(PowerUpsCheck());
+        StartCoroutine(ActivateRB());
+
     }
     public IEnumerator PowerUpsCheck()
     {
@@ -45,6 +48,12 @@ public class Pins : MonoBehaviour
             yield return new WaitForSeconds(waitTime);
             StartCoroutine(ScalePinOverTime());
         }
+    }
+    public IEnumerator ActivateRB()
+    {
+        yield return new WaitForSeconds(rbWaitTime);
+        rb.isKinematic = false;
+        print("hihi");
     }
     public IEnumerator ScalePinOverTime()
     {
@@ -79,8 +88,6 @@ public class Pins : MonoBehaviour
 
     void CheckIffCanAddPoints()
     {
-        if (beenHit && !pointGranted && !pinPuller.GetComponent<PinPuller>().pulling)
-        {
             raySpawn = transform.position;
             raySpawn.y += 0.05f;
 
@@ -89,20 +96,16 @@ public class Pins : MonoBehaviour
 
             if (!Physics.Raycast(ray, out RaycastHit hit, rayLength, groundlayer))
             {
-                gameManager.GetComponent<GameManager>().AddPoint();
-                pointGranted = true;
+                if (!pointGranted && !pinPuller.GetComponent<PinPuller>().pulling)
+                {
+                    gameManager.GetComponent<GameManager>().AddPoint();
+                    pointGranted = true;
+                }
             }
-        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ball" || collision.gameObject.tag == "Pin")
-        {
-            rb.isKinematic = false;
-            beenHit = true;
-        }
-
         if (collision.gameObject.tag == "DeathPlane" || collision.gameObject.tag == "PinPuller")
         {
             Destroy(gameObject);
