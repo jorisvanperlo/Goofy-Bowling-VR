@@ -12,6 +12,14 @@ TagManager:
   - GutterAccel
   - BallDetector
   - Floor
+  - SmallPin
+  - BigPin
+  - SmallBall
+  - BigBall
+  - GutterWalls
+  - DoublePoints
+  - Slide
+  - MovingPins
   layers:
   - Default
   - TransparentFX
