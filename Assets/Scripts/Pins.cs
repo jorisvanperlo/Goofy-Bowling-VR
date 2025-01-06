@@ -41,27 +41,23 @@ public class Pins : MonoBehaviour
             targetScale = largeScale;
             yield return new WaitForSeconds(waitTime);
             StartCoroutine(ScalePinOverTime());
+            gameManager.GetComponent<GameManager>().pinGrow = false;
         }
         if (gameManager.GetComponent<GameManager>().pinShrink)
         {
             targetScale = smallScale;
             yield return new WaitForSeconds(waitTime);
             StartCoroutine(ScalePinOverTime());
+            gameManager.GetComponent<GameManager>().pinShrink = false;
         }
     }
     public IEnumerator ActivateRB()
     {
         yield return new WaitForSeconds(rbWaitTime);
         rb.isKinematic = false;
-        print("hihi");
     }
     public IEnumerator ScalePinOverTime()
     {
-        gameManager.GetComponent<GameManager>().pinGrow = false;
-        gameManager.GetComponent<GameManager>().pinShrink = false;
-
-        print("Scale pin");
-
         float addToScale = 1f;
         if (transform.localScale.x > targetScale)
         {

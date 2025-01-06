@@ -20,7 +20,7 @@ public class BowlingBall : XRGrabInteractable
 
     public bool isBeingHeld;
     public UnityEvent OnLetGo;
-    public GameObject GameManager;
+    public GameObject gameManager;
 
     public Rigidbody rb;
     public float gutterSpeed;
@@ -59,24 +59,13 @@ public class BowlingBall : XRGrabInteractable
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "DeathPlane")
-        {
-            GameManager.GetComponent<GameManager>().SetupFreshLane();
-            startDeathTimer = false;
-            deathTimer = startTime;
-        }
-    }
-
     public void RespawnBall()
     {
-        GameManager.GetComponent<GameManager>().BallTrown();
+        gameManager.GetComponent<GameManager>().BallTrown();
         transform.position = ballSpawn;
 
         rb.mass = normalWeight;
         transform.localScale = new Vector3(1, 1, 1);
-        GameManager.GetComponent<GameManager>().dubblePoints = false;
     }
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
@@ -122,6 +111,63 @@ public class BowlingBall : XRGrabInteractable
         if (other.gameObject.tag == "GutterAccel")
         {
             rb.AddForce(-Vector3.forward * gutterSpeed);
+        }
+        if (other.gameObject.tag == "BallDetector")
+        {
+
+        }
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag == "SmallBall")
+        {
+            gameManager.GetComponent<GameManager>().SmallBall();
+            collision.gameObject.SetActive(false);
+        }
+        if (collision.gameObject.tag == "BigBall")
+        {
+            gameManager.GetComponent<GameManager>().BigBall();
+            collision.gameObject.SetActive(false);
+        }
+        if (collision.gameObject.tag == "SmallPin")
+        {
+            gameManager.GetComponent<GameManager>().SmallPin();
+            collision.gameObject.SetActive(false);
+        }
+        if (collision.gameObject.tag == "BigPin")
+        {
+            gameManager.GetComponent<GameManager>().BigPin();
+            collision.gameObject.SetActive(false);
+        }
+        if (collision.gameObject.tag == "MovingPins")
+        {
+            gameManager.GetComponent<GameManager>().MovingPins();
+            collision.gameObject.SetActive(false);
+        }
+        if (collision.gameObject.tag == "GutterWalls")
+        {
+            gameManager.GetComponent<GameManager>().GutterWalls();
+            collision.gameObject.SetActive(false);
+        }
+        if (collision.gameObject.tag == "Slide")
+        {
+            gameManager.GetComponent<GameManager>().Slide();
+            collision.gameObject.SetActive(false);
+        }
+        if (collision.gameObject.tag == "DoublePoints")
+        {
+            gameManager.GetComponent<GameManager>().DoublePoints();
+            collision.gameObject.SetActive(false);
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "DeathPlane")
+        {
+            gameManager.GetComponent<GameManager>().SetupFreshLane();
+            startDeathTimer = false;
+            deathTimer = startTime;
         }
     }
 }

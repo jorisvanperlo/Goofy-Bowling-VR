@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    //gameobjects
+    //GameObjects
     public GameObject pinsPlacer;
     public GameObject pinPuller;
     public GameObject ball;
 
-    //managing
+    //GameManaging
     public int points;
     public int pointReq;
 
@@ -19,21 +19,41 @@ public class GameManager : MonoBehaviour
 
     public string nextScene;
 
-    // powerups
+    //PowerUps
     public bool pinGrow;
     public bool pinShrink;
 
     public bool ballGrow;
     public bool ballShrink;
 
-    public bool dubblePoints;
+    public bool doublePoints;
+
+    public bool movingPins;
+
+    public bool gutterWalls;
+    public GameObject gutterWallsOb;
+
+    public bool slide;
+    public GameObject slideOb;
+
+    //PowerUpsObjects
+    public int randomPowerUp;
+
+    public GameObject SmallBallDebuff;
+    public GameObject SmallPinDebuff;
+    public GameObject MovingPinsDebuff;
+    public GameObject BallBigPowerup;
+    public GameObject PinBigPowerup;
+    public GameObject GutterWallsPowerup;
+    public GameObject SlidePowerup;
+    public GameObject DoublePointsPowerup;
     void Start()
     {
         SetupFreshLane();
     }
     public void AddPoint()
     {
-        if (dubblePoints)
+        if (doublePoints)
         {
             points += 2;
         }
@@ -64,29 +84,135 @@ public class GameManager : MonoBehaviour
     public void SetupFreshLane()
     {
         ClearLane();
+        ClearPowerUp();
         PowerUpsManager();
         PinDeployment();
+        PowerUpsSpawn();
     }
     public void ClearLane()
     {
         pinPuller.GetComponent<PinPuller>().PullPinDelay();
         ball.GetComponent<BowlingBall>().RespawnBall();
     }
+    public void ClearPowerUp()
+    {
+     slideOb.SetActive(false);
+     gutterWallsOb.SetActive(false);
+
+     SmallBallDebuff.SetActive(false);
+     SmallPinDebuff.SetActive(false);
+     MovingPinsDebuff.SetActive(false);
+     BallBigPowerup.SetActive(false);
+     PinBigPowerup.SetActive(false);
+     GutterWallsPowerup.SetActive(false);
+     SlidePowerup.SetActive(false);
+     DoublePointsPowerup.SetActive(false);
+}
 
     public void PowerUpsManager()
     {
         if (ballGrow)
         {
             ball.GetComponent<BowlingBall>().makeBallBig = true;
+            ballGrow = false;
         }
         if (ballShrink)
         {
             ball.GetComponent<BowlingBall>().makeBallBig = true;
+            ballShrink = false;
+        }
+        if (movingPins)
+        {
+            //moving the pins
+            movingPins = false;
+        }
+        if (gutterWalls)
+        {
+            gutterWallsOb.SetActive(false);
+            gutterWalls = false;
+        }
+        if (slide)
+        {
+            slideOb.SetActive(true);
+            slide = false;
         }
     }
 
     public void PinDeployment()
     {
         pinsPlacer.GetComponent<MovingPinsPlacer>().DeployPinsDelay();
+    }
+
+
+    //------PowerUps-----
+    public void SmallBall()
+    {
+        ballShrink = true;
+    }
+    public void BigBall()
+    {
+        ballGrow = true;
+    }
+    public void SmallPin()
+    {
+        pinShrink = true;
+    }
+    public void BigPin()
+    {
+        pinGrow = true;
+    }
+    public void MovingPins()
+    {
+        movingPins = true;
+    }
+    public void GutterWalls()
+    {
+        gutterWalls = true;
+    }
+    public void Slide()
+    {
+        slide = true;
+    }
+    public void DoublePoints()
+    {
+        doublePoints = true;
+    }
+
+    public void PowerUpsSpawn()
+    {
+        randomPowerUp = Random.Range(1, 9);
+
+        if (randomPowerUp == 1)
+        {
+            SmallBallDebuff.SetActive(true);
+        }
+        if (randomPowerUp == 2)
+        {
+            SmallPinDebuff.SetActive(true);
+        }
+        if (randomPowerUp == 3)
+        {
+            MovingPinsDebuff.SetActive(true);
+        }
+        if (randomPowerUp == 4)
+        {
+            BallBigPowerup.SetActive(true);
+        }
+        if (randomPowerUp == 5)
+        {
+            GutterWallsPowerup.SetActive(true);
+        }
+        if (randomPowerUp == 6)
+        {
+            SlidePowerup.SetActive(true);
+        }
+        if (randomPowerUp == 7)
+        {
+            DoublePointsPowerup.SetActive(true);
+        }
+        if (randomPowerUp == 8)
+        {
+            PinBigPowerup.SetActive(true);
+        }
     }
 }
