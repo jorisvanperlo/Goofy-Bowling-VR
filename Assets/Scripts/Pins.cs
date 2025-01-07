@@ -24,6 +24,7 @@ public class Pins : MonoBehaviour
     public float waitTime;
     public float rbWaitTime;
 
+    public bool canRay;
 
     void Start()
     {
@@ -55,6 +56,7 @@ public class Pins : MonoBehaviour
     {
         yield return new WaitForSeconds(rbWaitTime);
         rb.isKinematic = false;
+        canRay = true;
     }
     public IEnumerator ScalePinOverTime()
     {
@@ -90,7 +92,7 @@ public class Pins : MonoBehaviour
             Ray ray = new Ray(raySpawn, -transform.up);
 
 
-            if (!Physics.Raycast(ray, out RaycastHit hit, rayLength, groundlayer))
+            if (!Physics.Raycast(ray, out RaycastHit hit, rayLength, groundlayer) & canRay)
             {
                 if (!pointGranted && !pinPuller.GetComponent<PinPuller>().pulling)
                 {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class GameManager : MonoBehaviour
     public GameObject pinsPlacer;
     public GameObject pinPuller;
     public GameObject ball;
+
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI highscoreText;
+    public int highscore;
+
 
     //GameManaging
     public int points;
@@ -63,23 +69,31 @@ public class GameManager : MonoBehaviour
         if (doublePoints)
         {
             points += 2;
+            scoreText.text = points.ToString();
         }
         else
         {
             points ++;
+            scoreText.text = points.ToString();
         }
     }
 
     public void BallTrown()
     {
         ballsThrown++;
-        if(ballsThrown <= attemptAmount)
+        if(ballsThrown >= attemptAmount)
         {
             GameReset();
         }
     }
     public void GameReset()
     {
+        if (points > highscore)
+        {
+            highscore = points;
+            highscoreText.text = highscore.ToString();
+        }
+        
         ballsThrown = 0;
         points = 0;
 
@@ -140,6 +154,7 @@ public class GameManager : MonoBehaviour
         }
         if (movingPins)
         {
+            ball.GetComponent<BallPowerUps>().ChangeLayer();
             movingPins = false;
         }
         if (gutterWalls)
@@ -156,7 +171,7 @@ public class GameManager : MonoBehaviour
         }
         if (movingPins)
         {
-            ball.GetComponent<BallPowerUps>().changeLayer();
+            ball.GetComponent<BallPowerUps>().ChangeLayer();
         }
         if (ActivateDoublePoints)
         {
@@ -169,7 +184,6 @@ public class GameManager : MonoBehaviour
     {
         pinsPlacer.GetComponent<MovingPinsPlacer>().DeployPinsDelay();
     }
-
 
     //------PowerUps-----
     public void SmallBall()

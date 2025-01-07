@@ -65,7 +65,7 @@ public class BallPowerUps : MonoBehaviour
         shouldShrink = true; // Start the lerp
         elapsedTime = 0f; // Reset elapsed time
     }
-    public void changeLayer()
+    public void ChangeLayer()
     {
         if (noHitLay)
         {
