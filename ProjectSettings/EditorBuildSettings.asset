@@ -11,9 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 56716bbeb8e27594f91f17ea72fcf800
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BinnenMap.unity
     guid: 45dfe1c12d079574e8a95b118773354a
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: f1ebdf6500f411d4e80e89ad15c480c0
+  - enabled: 0
+    path: Assets/Scenes/Level1.unity
+    guid: 68e695d1879066c4483512ee2e83dd5f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}
