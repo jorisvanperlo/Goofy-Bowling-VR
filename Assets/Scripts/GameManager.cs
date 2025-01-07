@@ -39,7 +39,9 @@ public class GameManager : MonoBehaviour
     public GameObject gutterWallsOb;
 
     public bool slide;
-    //public GameObject slideOb;
+    public GameObject slideOb;
+    public Quaternion slideRot;
+    public Vector3 slideSpawn;
 
     //PowerUpsObjects
     public int randomPowerUp;
@@ -65,10 +67,6 @@ public class GameManager : MonoBehaviour
         else
         {
             points ++;
-        }
-        if(points >= pointReq)
-        {
-            SceneManager.LoadScene(nextScene);
         }
     }
 
@@ -106,13 +104,14 @@ public class GameManager : MonoBehaviour
         {
             doubPointSameRound = false;
             doubPointNextRound = true;
+            doublePoints = true;
         }
         if (doubPointNextRound)
         {
             doublePoints = false;
             doubPointNextRound = false;
         }
-     //slideOb.SetActive(false);
+     slideOb.SetActive(false);
      gutterWallsOb.GetComponent<Gutterwalls>().MoveBackToA();
 
      SmallBallDebuff.SetActive(false);
@@ -141,7 +140,6 @@ public class GameManager : MonoBehaviour
         }
         if (movingPins)
         {
-            //moving the pins
             movingPins = false;
         }
         if (gutterWalls)
@@ -151,7 +149,9 @@ public class GameManager : MonoBehaviour
         }
         if (slide)
         {
-            //slideOb.SetActive(true);
+            slideOb.SetActive(true);
+            slideOb.GetComponent<Transform>().position = slideSpawn;
+            slideOb.GetComponent<Transform>().rotation = slideRot;
             slide = false;
         }
         if (movingPins)
