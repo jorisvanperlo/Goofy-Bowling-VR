@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour
 
     public string nextScene;
 
+    public bool doubPointSameRound;
+    public bool doubPointNextRound;
+
+    public bool ActivateDoublePoints;
+
     //PowerUps
     public bool pinGrow;
     public bool pinShrink;
@@ -34,7 +39,7 @@ public class GameManager : MonoBehaviour
     public GameObject gutterWallsOb;
 
     public bool slide;
-    public GameObject slideOb;
+    //public GameObject slideOb;
 
     //PowerUpsObjects
     public int randomPowerUp;
@@ -79,6 +84,7 @@ public class GameManager : MonoBehaviour
     {
         ballsThrown = 0;
         points = 0;
+
     }
 
     public void SetupFreshLane()
@@ -96,8 +102,18 @@ public class GameManager : MonoBehaviour
     }
     public void ClearPowerUp()
     {
-     slideOb.SetActive(false);
-     gutterWallsOb.SetActive(false);
+        if (doubPointSameRound)
+        {
+            doubPointSameRound = false;
+            doubPointNextRound = true;
+        }
+        if (doubPointNextRound)
+        {
+            doublePoints = false;
+            doubPointNextRound = false;
+        }
+     //slideOb.SetActive(false);
+     gutterWallsOb.GetComponent<Gutterwalls>().MoveBackToA();
 
      SmallBallDebuff.SetActive(false);
      SmallPinDebuff.SetActive(false);
@@ -107,10 +123,12 @@ public class GameManager : MonoBehaviour
      GutterWallsPowerup.SetActive(false);
      SlidePowerup.SetActive(false);
      DoublePointsPowerup.SetActive(false);
-}
+     }
 
     public void PowerUpsManager()
     {
+        ball.GetComponent<BallPowerUps>().gameObject.layer = 1;
+
         if (ballGrow)
         {
             ball.GetComponent<BowlingBall>().makeBallBig = true;
@@ -133,9 +151,18 @@ public class GameManager : MonoBehaviour
         }
         if (slide)
         {
-            slideOb.SetActive(true);
+            //slideOb.SetActive(true);
             slide = false;
         }
+        if (movingPins)
+        {
+            ball.GetComponent<BallPowerUps>().changeLayer();
+        }
+        if (ActivateDoublePoints)
+        {
+            doublePoints = true;
+        }
+
     }
 
     public void PinDeployment()
@@ -175,7 +202,7 @@ public class GameManager : MonoBehaviour
     }
     public void DoublePoints()
     {
-        doublePoints = true;
+        ActivateDoublePoints = true;
     }
 
     public void PowerUpsSpawn()

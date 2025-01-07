@@ -16,6 +16,9 @@ public class BallPowerUps : MonoBehaviour
     public bool shouldGrow;
     public bool shouldShrink;
     public float growTime;
+
+    public bool noHitLay;
+    
     void Start()
     {
         
@@ -61,5 +64,18 @@ public class BallPowerUps : MonoBehaviour
     {
         shouldShrink = true; // Start the lerp
         elapsedTime = 0f; // Reset elapsed time
+    }
+    public void changeLayer()
+    {
+        if (noHitLay)
+        {
+            gameObject.layer = 7;
+            noHitLay = false;
+        }
+        else
+        {
+            gameObject.layer = 1;
+            noHitLay = true;
+        }
     }
 }

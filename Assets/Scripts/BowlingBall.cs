@@ -66,6 +66,7 @@ public class BowlingBall : XRGrabInteractable
 
         rb.mass = normalWeight;
         transform.localScale = new Vector3(1, 1, 1);
+        rb.velocity = Vector3.zero;
     }
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
