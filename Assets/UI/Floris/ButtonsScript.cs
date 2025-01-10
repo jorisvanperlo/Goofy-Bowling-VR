@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonsScript : MonoBehaviour
 {
@@ -13,7 +14,10 @@ public class ButtonsScript : MonoBehaviour
     public GameObject buttonQuitYes;
     public GameObject quitYesNoText;
     public GameObject creditText;
+    public GameObject creditTextImage;
     public GameObject creditsReturn;
+    public GameObject title;
+    public GameObject quitYesNoTextImage;
     public string level1;
 
     public void ButtonStartGame()
@@ -28,33 +32,39 @@ public class ButtonsScript : MonoBehaviour
     {
         creditText.SetActive(true);
         creditsReturn.SetActive(true);
+        creditTextImage.SetActive(true);
 
         buttonStartGame.SetActive(false);
         buttonSettings.SetActive(false);
         buttonCredits.SetActive(false);
         buttonQuit.SetActive(false);
+        title.SetActive(false);
     }
     public void ButtonQuit()
     {
         buttonQuitNo.SetActive(true);
         buttonQuitYes.SetActive(true);
         quitYesNoText.SetActive(true);
+        quitYesNoTextImage.SetActive(true);
 
         buttonStartGame.SetActive(false);
         buttonSettings.SetActive(false);
         buttonCredits.SetActive(false);
         buttonQuit.SetActive(false);
+        title.SetActive(false);
     }
     public void QuitNo()
     {
         buttonQuitNo.SetActive(false);
         buttonQuitYes.SetActive(false);
         quitYesNoText.SetActive(false);
+        quitYesNoTextImage.SetActive(false);   
 
         buttonStartGame.SetActive(true);
         buttonSettings.SetActive(true);
         buttonCredits.SetActive(true);
         buttonQuit.SetActive(true);
+        title.SetActive(true);
     }
     public void QuitYes()
     {
@@ -64,10 +74,12 @@ public class ButtonsScript : MonoBehaviour
     {
         creditText.SetActive(false);
         creditsReturn.SetActive(false);
+        creditTextImage.SetActive(false);
 
         buttonStartGame.SetActive(true);
         buttonSettings.SetActive(true);
         buttonCredits.SetActive(true);
         buttonQuit.SetActive(true);
+        title.SetActive(true);
     }
 }
