@@ -74,7 +74,7 @@ public class BallPowerUps : MonoBehaviour
         }
         else
         {
-            gameObject.layer = 1;
+            gameObject.layer = 0;
             noHitLay = true;
         }
     }

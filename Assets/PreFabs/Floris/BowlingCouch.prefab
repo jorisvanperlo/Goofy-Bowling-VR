@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: -8679921383154817045}
   - component: {fileID: -5754084199372789682}
   - component: {fileID: -7511558181221131132}
-  - component: {fileID: 2740424012136246006}
-  - component: {fileID: 1268066733836283281}
   m_Layer: 0
   m_Name: BowlingCouch (1)
   m_TagString: Untagged
@@ -85,48 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2740424012136246006
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132149155446097}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.0200007, y: 0.84000003, z: 0.7934242}
-  m_Center: {x: -0.50999975, y: 0.42000002, z: -0.60328877}
---- !u!65 &1268066733836283281
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132149155446097}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.8086447, y: 0.84000003, z: 0.70081073}
-  m_Center: {x: 0.59567875, y: 0.42000002, z: 0.14959429}
 --- !u!1 &5538223813912619264
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,8 +125,10 @@ GameObject:
   - component: {fileID: 5845667225278748789}
   - component: {fileID: 7399450247844141008}
   - component: {fileID: 4707624464022364954}
-  - component: {fileID: 1768885920730170227}
-  - component: {fileID: 6141986533293622375}
+  - component: {fileID: 6976178117490631103}
+  - component: {fileID: 204068049765414805}
+  - component: {fileID: 152021232268206948}
+  - component: {fileID: 9092288641493186199}
   m_Layer: 0
   m_Name: BowlingCouch
   m_TagString: Untagged
@@ -193,6 +151,7 @@ Transform:
   m_Children:
   - {fileID: -8679921383154817045}
   - {fileID: 1405472151562894141}
+  - {fileID: 3936505350956368407}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &7399450247844141008
@@ -245,7 +204,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1768885920730170227
+--- !u!65 &6976178117490631103
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,9 +223,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.90196073, y: 0.84000003, z: 0.79015565}
-  m_Center: {x: 0.54902, y: 0.42000002, z: 0.104922324}
---- !u!65 &6141986533293622375
+  m_Size: {x: 3.0200007, y: 0.84000003, z: 0.7792824}
+  m_Center: {x: -0.5100002, y: 0.42000002, z: -0.6103592}
+--- !u!65 &204068049765414805
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -285,5 +244,78 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.0200007, y: 0.84000003, z: 0.73739773}
-  m_Center: {x: -0.5100002, y: 0.42000002, z: -0.64355516}
+  m_Size: {x: 3.0200007, y: 0.84000003, z: 0.7619477}
+  m_Center: {x: -0.5100002, y: 0.42000002, z: 2.6127381}
+--- !u!65 &152021232268206948
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6508875680901645007}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7734799, y: 0.84000003, z: 0.72167945}
+  m_Center: {x: 0.61326045, y: 0.42000002, z: 0.13916042}
+--- !u!65 &9092288641493186199
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6508875680901645007}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7857654, y: 0.84000003, z: 0.7264791}
+  m_Center: {x: 0.6071177, y: 0.42000002, z: 1.8666269}
+--- !u!1 &7882311494216509679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3936505350956368407}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3936505350956368407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882311494216509679}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5845667225278748789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

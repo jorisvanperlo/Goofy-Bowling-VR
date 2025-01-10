@@ -140,7 +140,7 @@ public class GameManager : MonoBehaviour
 
     public void PowerUpsManager()
     {
-        ball.GetComponent<BallPowerUps>().gameObject.layer = 1;
+        ball.GetComponent<BallPowerUps>().gameObject.layer = 0;
 
         if (ballGrow)
         {
