@@ -189,34 +189,42 @@ public class GameManager : MonoBehaviour
     public void SmallBall()
     {
         ballShrink = true;
+        print("ballShrink");
     }
     public void BigBall()
     {
         ballGrow = true;
+        print("ballGrow");
     }
     public void SmallPin()
     {
         pinShrink = true;
+        print("pinShrink");
     }
     public void BigPin()
     {
         pinGrow = true;
+        print("pinGrow");
     }
     public void MovingPins()
     {
         movingPins = true;
+        print("movingPins");
     }
     public void GutterWalls()
     {
         gutterWalls = true;
+        print("gutterWalls");
     }
     public void Slide()
     {
         slide = true;
+        print("slide");
     }
     public void DoublePoints()
     {
         ActivateDoublePoints = true;
+        print("ActivateDoublePoints");
     }
 
     public void PowerUpsSpawn()

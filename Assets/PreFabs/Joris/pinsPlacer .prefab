@@ -29,8 +29,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.239, y: 2, z: 8.23}
-  m_LocalScale: {x: 1.27, y: 0.2, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7241807925345575531}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 8005824639189460890, guid: 9f5af58cb183062499f11d3e0d7eccd6, type: 3}
 --- !u!23 &114041232862497161
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd3cca9895990b40aa8b78c4b2a8aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top: {x: 0, y: 1.4, z: -23.17}
-  bottom: {x: 0, y: 0.12, z: -23.17}
+  top: {x: 0, y: 1.4, z: -23.301}
+  bottom: {x: 0, y: 0.17248, z: -23.301}
   reachBottom: 0
   moveDuration: 2
   waitTime: 1
