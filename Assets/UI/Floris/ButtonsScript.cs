@@ -19,6 +19,7 @@ public class ButtonsScript : MonoBehaviour
     public GameObject title;
     public GameObject quitYesNoTextImage;
     public string level1;
+    public string mainMenu;
 
     public void ButtonStartGame()
     {
@@ -84,5 +85,9 @@ public class ButtonsScript : MonoBehaviour
         buttonCredits.SetActive(true);
         buttonQuit.SetActive(true);
         title.SetActive(true);
+    }
+    public void ButtonMenu()
+    {
+        SceneManager.LoadScene(mainMenu);
     }
 }
