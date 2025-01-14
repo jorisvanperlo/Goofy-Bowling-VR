@@ -23,6 +23,7 @@ public class ButtonsScript : MonoBehaviour
     public void ButtonStartGame()
     {
         SceneManager.LoadScene(level1);
+        print("StartGame");
     }
     public void ButtonSettings()
     {
@@ -38,7 +39,8 @@ public class ButtonsScript : MonoBehaviour
         buttonSettings.SetActive(false);
         buttonCredits.SetActive(false);
         buttonQuit.SetActive(false);
-        title.SetActive(false);
+        title.SetActive(false); 
+        print("Credits");
     }
     public void ButtonQuit()
     {
@@ -52,6 +54,7 @@ public class ButtonsScript : MonoBehaviour
         buttonCredits.SetActive(false);
         buttonQuit.SetActive(false);
         title.SetActive(false);
+        print("Quit");
     }
     public void QuitNo()
     {
