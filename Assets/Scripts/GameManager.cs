@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI throwAttempt;
     //GameManaging
     public int points;
-    public int pointReq;
 
     public int ballsThrown;
     public int attemptAmount;
