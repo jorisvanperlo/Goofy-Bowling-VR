@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
     {
         ballsThrown++;
         throwAttempt.text = ballsThrown.ToString();
-        if(ballsThrown >= attemptAmount)
+        if(ballsThrown > attemptAmount)
         {
             GameReset();
         }
@@ -113,7 +113,8 @@ public class GameManager : MonoBehaviour
     }
     public void ClearPowerUp()
     {
-        doublePoints = false;
+     ball.GetComponent<BallPowerUps>().gameObject.layer = 0;
+     doublePoints = false;
      slideOb.SetActive(false);
      gutterWallsOb.GetComponent<Gutterwalls>().MoveBackToA();
 
@@ -129,8 +130,6 @@ public class GameManager : MonoBehaviour
 
     public void PowerUpsManager()
     {
-        ball.GetComponent<BallPowerUps>().gameObject.layer = 0;
-
         if (ballGrow)
         {
             ball.GetComponent<BowlingBall>().makeBallBig = true;
@@ -140,11 +139,6 @@ public class GameManager : MonoBehaviour
         {
             ball.GetComponent<BowlingBall>().makeBallBig = true;
             ballShrink = false;
-        }
-        if (movingPins)
-        {
-            ball.GetComponent<BallPowerUps>().ChangeLayer();
-            movingPins = false;
         }
         if (gutterWalls)
         {
@@ -161,6 +155,7 @@ public class GameManager : MonoBehaviour
         if (movingPins)
         {
             ball.GetComponent<BowlingBall>().changeLayer = true;
+            movingPins = false;
         }
         if (activateDoublePoints)
         {
