@@ -15,13 +15,13 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI highscoreText;
     public int highscore;
 
-
+    public TextMeshProUGUI throwAttempt;
     //GameManaging
     public int points;
     public int pointReq;
 
-    public float ballsThrown;
-    public float attemptAmount;
+    public int ballsThrown;
+    public int attemptAmount;
 
     public string nextScene;
 
@@ -81,6 +81,7 @@ public class GameManager : MonoBehaviour
     public void BallTrown()
     {
         ballsThrown++;
+        throwAttempt.text = ballsThrown.ToString();
         if(ballsThrown >= attemptAmount)
         {
             GameReset();
