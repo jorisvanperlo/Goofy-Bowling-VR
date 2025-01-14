@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     public bool doubPointSameRound;
     public bool doubPointNextRound;
 
-    public bool ActivateDoublePoints;
+    public bool activateDoublePoints;
 
     //PowerUps
     public bool pinGrow;
@@ -92,11 +92,9 @@ public class GameManager : MonoBehaviour
         {
             highscore = points;
             highscoreText.text = highscore.ToString();
-        }
-        
+        } 
         ballsThrown = 0;
         points = 0;
-
     }
 
     public void SetupFreshLane()
@@ -114,17 +112,7 @@ public class GameManager : MonoBehaviour
     }
     public void ClearPowerUp()
     {
-        if (doubPointSameRound)
-        {
-            doubPointSameRound = false;
-            doubPointNextRound = true;
-            doublePoints = true;
-        }
-        if (doubPointNextRound)
-        {
-            doublePoints = false;
-            doubPointNextRound = false;
-        }
+        doublePoints = false;
      slideOb.SetActive(false);
      gutterWallsOb.GetComponent<Gutterwalls>().MoveBackToA();
 
@@ -159,7 +147,7 @@ public class GameManager : MonoBehaviour
         }
         if (gutterWalls)
         {
-            gutterWallsOb.SetActive(false);
+            gutterWallsOb.SetActive(true);
             gutterWalls = false;
         }
         if (slide)
@@ -173,9 +161,10 @@ public class GameManager : MonoBehaviour
         {
             ball.GetComponent<BallPowerUps>().ChangeLayer();
         }
-        if (ActivateDoublePoints)
+        if (activateDoublePoints)
         {
             doublePoints = true;
+            activateDoublePoints = false;
         }
 
     }
@@ -223,7 +212,7 @@ public class GameManager : MonoBehaviour
     }
     public void DoublePoints()
     {
-        ActivateDoublePoints = true;
+        activateDoublePoints = true;
         print("ActivateDoublePoints");
     }
 

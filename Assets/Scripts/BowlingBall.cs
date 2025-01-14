@@ -54,7 +54,7 @@ public class BowlingBall : XRGrabInteractable
             {
                 startDeathTimer = false;
                 deathTimer = startTime;
-                RespawnBall();
+                gameManager.GetComponent<GameManager>().SetupFreshLane();
             }
         }
     }
@@ -63,10 +63,9 @@ public class BowlingBall : XRGrabInteractable
     {
         gameManager.GetComponent<GameManager>().BallTrown();
         transform.position = ballSpawn;
-
+        rb.velocity = Vector3.zero;
         rb.mass = normalWeight;
         transform.localScale = new Vector3(1, 1, 1);
-        rb.velocity = Vector3.zero;
     }
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
@@ -115,7 +114,7 @@ public class BowlingBall : XRGrabInteractable
         }
         if (other.gameObject.tag == "BallDetector")
         {
-
+            //hihi nothing
         }
     }
 

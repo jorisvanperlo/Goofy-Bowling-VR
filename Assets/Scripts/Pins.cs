@@ -16,10 +16,13 @@ public class Pins : MonoBehaviour
     public Vector3 raySpawn;
     public float rayLength;
 
-    public float largeScale;
-    public float smallScale;
-    public float targetScale;
-    public float scaleTime;
+    public Vector3 largeScale;
+    public Vector3 smallScale;
+
+    public Vector3 startScale;
+    public Vector3 endScale;
+
+    public float duration;
 
     public float waitTime;
     public float rbWaitTime;
@@ -39,15 +42,22 @@ public class Pins : MonoBehaviour
     {
         if (gameManager.GetComponent<GameManager>().pinGrow)
         {
-            targetScale = largeScale;
+            
             yield return new WaitForSeconds(waitTime);
+
+            endScale = largeScale;
+
             StartCoroutine(ScalePinOverTime());
             gameManager.GetComponent<GameManager>().pinGrow = false;
         }
         if (gameManager.GetComponent<GameManager>().pinShrink)
         {
-            targetScale = smallScale;
+            
+            
             yield return new WaitForSeconds(waitTime);
+
+            endScale = smallScale; 
+
             StartCoroutine(ScalePinOverTime());
             gameManager.GetComponent<GameManager>().pinShrink = false;
         }
@@ -60,23 +70,25 @@ public class Pins : MonoBehaviour
     }
     public IEnumerator ScalePinOverTime()
     {
-        float addToScale = 1f;
-        if (transform.localScale.x > targetScale)
+        float elapsedTime = 0f;
+
+        // Set the initial scale
+        transform.localScale = startScale;
+
+        while (elapsedTime < duration)
         {
-            addToScale --;
-        }
-        bool canScale = true;
-        Vector3 targetScaleVector = new Vector3(targetScale, targetScale, targetScale);
-        while (canScale)
-        {
-            transform.localScale += (new Vector3(1, 1, 1) * addToScale) * Time.deltaTime * scaleTime;
-            if (Vector3.Distance(transform.localScale, targetScaleVector) < 0.1f)
-            {
-                transform.localScale = targetScaleVector;
-                canScale = false;
-            }
+            // Calculate the current scale based on elapsed time
+            transform.localScale = Vector3.Lerp(startScale, endScale, elapsedTime / duration);
+
+            // Increment elapsed time
+            elapsedTime += Time.deltaTime;
+
+            // Wait for the next frame
             yield return null;
         }
+
+        // Ensure the final scale is set
+        transform.localScale = endScale;
     }
 
     void Update()
