@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour
         }
         if (movingPins)
         {
-            ball.GetComponent<BallPowerUps>().ChangeLayer();
+            ball.GetComponent<BowlingBall>().changeLayer = true;
         }
         if (activateDoublePoints)
         {

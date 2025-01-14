@@ -38,6 +38,7 @@ public class BowlingBall : XRGrabInteractable
 
     public bool dubblePoints;
 
+    public bool changeLayer;
     void Start()
     {
         transform.position = ballSpawn;
@@ -66,6 +67,7 @@ public class BowlingBall : XRGrabInteractable
         rb.velocity = Vector3.zero;
         rb.mass = normalWeight;
         transform.localScale = new Vector3(1, 1, 1);
+        gameObject.layer = 0;
     }
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
@@ -78,6 +80,7 @@ public class BowlingBall : XRGrabInteractable
 
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
+
         base.OnSelectExited(args);
 
         // Check if no interactors are holding the object
@@ -88,6 +91,11 @@ public class BowlingBall : XRGrabInteractable
             OnLetGo?.Invoke();
             if (isBeingHeld == true)
             {
+                if (changeLayer)
+                {
+                    gameObject.GetComponent<BallPowerUps>().ChangeLayer();
+                    changeLayer = false;
+                }
                 startDeathTimer = true;
                 if (makeBallBig == true)
                 {

@@ -45705,6 +45705,7 @@ MonoBehaviour:
   makeBallSmall: 0
   smallWeight: 1
   dubblePoints: 0
+  changeLayer: 0
 --- !u!114 &966335959
 MonoBehaviour:
   m_ObjectHideFlags: 0
