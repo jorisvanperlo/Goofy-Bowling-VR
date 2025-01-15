@@ -80,11 +80,12 @@ public class GameManager : MonoBehaviour
     public void BallTrown()
     {
         ballsThrown++;
-        throwAttempt.text = ballsThrown.ToString();
+        
         if(ballsThrown > attemptAmount)
         {
             GameReset();
         }
+        throwAttempt.text = ballsThrown.ToString();
     }
     public void GameReset()
     {
@@ -92,8 +93,9 @@ public class GameManager : MonoBehaviour
         {
             highscore = points;
             highscoreText.text = highscore.ToString();
+            throwAttempt.text = ballsThrown.ToString();
         } 
-        ballsThrown = 0;
+        ballsThrown = 1;
         points = 0;
     }
 
