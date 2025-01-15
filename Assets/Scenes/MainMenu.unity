@@ -1773,15 +1773,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b3ca6b818de22f74485de199b1bea750, type: 3}
       propertyPath: m_LocalScale.x
-      value: -0.6
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3ca6b818de22f74485de199b1bea750, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3ca6b818de22f74485de199b1bea750, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3ca6b818de22f74485de199b1bea750, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1834,6 +1834,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b3ca6b818de22f74485de199b1bea750, type: 3}
       propertyPath: m_Name
       value: handboling game rechts
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b3ca6b818de22f74485de199b1bea750, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2053,10 +2057,6 @@ PrefabInstance:
     - target: {fileID: 1158104061610483907, guid: 0f6d9cf3d2857344fbbe293594ceb2ee, type: 3}
       propertyPath: m_Name
       value: Ceiling_Tile (15)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1158104061610483907, guid: 0f6d9cf3d2857344fbbe293594ceb2ee, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1970809921579170425, guid: 0f6d9cf3d2857344fbbe293594ceb2ee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2419,6 +2419,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bde98ff38f31a5248b55330946db99c7, type: 3}
+--- !u!1 &559712725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 559712727}
+  - component: {fileID: 559712726}
+  m_Layer: 0
+  m_Name: Reflection Probe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!215 &559712726
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559712725}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 0
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 10, y: 3.5411868, z: 10}
+  m_BoxOffset: {x: 0, y: 0.22623235, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
+--- !u!4 &559712727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559712725}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3749373, z: -4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &577980947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b3ca6b818de22f74485de199b1bea750, type: 3}
@@ -2435,10 +2500,6 @@ PrefabInstance:
     - target: {fileID: 8261160157784924299, guid: 378fd176604cf74448d336f3ce068161, type: 3}
       propertyPath: m_Name
       value: Lamp (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8261160157784924299, guid: 378fd176604cf74448d336f3ce068161, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8786058639779641905, guid: 378fd176604cf74448d336f3ce068161, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3314,10 +3375,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp
       objectReference: {fileID: 0}
-    - target: {fileID: 8261160157784924299, guid: 378fd176604cf74448d336f3ce068161, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 8786058639779641905, guid: 378fd176604cf74448d336f3ce068161, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -3884,15 +3941,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b3ca6b818de22f74485de199b1bea750, type: 3}
       propertyPath: m_LocalScale.x
-      value: -0.6
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3ca6b818de22f74485de199b1bea750, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3ca6b818de22f74485de199b1bea750, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3ca6b818de22f74485de199b1bea750, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4517,15 +4574,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a6fcc59c9c26c6d48b305381a36f907c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a6fcc59c9c26c6d48b305381a36f907c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a6fcc59c9c26c6d48b305381a36f907c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a6fcc59c9c26c6d48b305381a36f907c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4578,6 +4635,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a6fcc59c9c26c6d48b305381a36f907c, type: 3}
       propertyPath: m_Name
       value: handboling game links
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a6fcc59c9c26c6d48b305381a36f907c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7548,10 +7609,6 @@ PrefabInstance:
     - target: {fileID: 8261160157784924299, guid: 378fd176604cf74448d336f3ce068161, type: 3}
       propertyPath: m_Name
       value: Lamp (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8261160157784924299, guid: 378fd176604cf74448d336f3ce068161, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8786058639779641905, guid: 378fd176604cf74448d336f3ce068161, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10709,3 +10766,4 @@ SceneRoots:
   - {fileID: 1536116094}
   - {fileID: 588637933}
   - {fileID: 1012141887}
+  - {fileID: 559712727}
