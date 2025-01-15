@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class ButtonsScript : MonoBehaviour
 {
     public GameObject buttonStartGame;
-    public GameObject buttonSettings;
     public GameObject buttonCredits;
     public GameObject buttonQuit;
     public GameObject buttonQuitNo;
@@ -37,7 +36,6 @@ public class ButtonsScript : MonoBehaviour
         creditTextImage.SetActive(true);
 
         buttonStartGame.SetActive(false);
-        buttonSettings.SetActive(false);
         buttonCredits.SetActive(false);
         buttonQuit.SetActive(false);
         title.SetActive(false); 
@@ -51,7 +49,6 @@ public class ButtonsScript : MonoBehaviour
         quitYesNoTextImage.SetActive(true);
 
         buttonStartGame.SetActive(false);
-        buttonSettings.SetActive(false);
         buttonCredits.SetActive(false);
         buttonQuit.SetActive(false);
         title.SetActive(false);
@@ -65,7 +62,6 @@ public class ButtonsScript : MonoBehaviour
         quitYesNoTextImage.SetActive(false);   
 
         buttonStartGame.SetActive(true);
-        buttonSettings.SetActive(true);
         buttonCredits.SetActive(true);
         buttonQuit.SetActive(true);
         title.SetActive(true);
@@ -81,7 +77,6 @@ public class ButtonsScript : MonoBehaviour
         creditTextImage.SetActive(false);
 
         buttonStartGame.SetActive(true);
-        buttonSettings.SetActive(true);
         buttonCredits.SetActive(true);
         buttonQuit.SetActive(true);
         title.SetActive(true);
